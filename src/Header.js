@@ -9,9 +9,9 @@ const Header = () => {
       >
         <div className="absolute w-[850px] h-[264px] left-[250px] top-[176px]">
           <h2 className="font-bold text-9xl leading-[90%] text-center flex items-center">
-            <h2 className="font-mono bg-gradient-to-b from-transparent  to-white text-transparent bg-clip-text ml-40">
+            <span className="font-mono bg-gradient-to-b from-transparent  to-white text-transparent bg-clip-text ml-40">
               Welcome to Hawaii
-            </h2>
+            </span>
           </h2>
         </div>
         <div className="flex flex-row justify-between items-center p-0 md:p-5 gap-6 md:gap-[100px] absolute w-[1136px] h-16 left-[188px] top-6 bg-white rounded-lg">

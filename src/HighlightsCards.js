@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HighlightsCards = ({ data }) => {
   return (
@@ -10,9 +11,11 @@ const HighlightsCards = ({ data }) => {
       </h2>
       <h2 className="font-serif w-2/3 mt-2 mx-2">{data.description}</h2>
 
-      <button className="px-[90%] bottom-0  text-green-900 mt-5 mb-5 ">
-        ➡
-      </button>
+      <Link to={"/activities/" + data.title}>
+        <button className="px-[90%] bottom-0  text-green-900 mt-5 mb-5 ">
+          ➡
+        </button>
+      </Link>
     </div>
   );
 };

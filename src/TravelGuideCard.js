@@ -10,7 +10,7 @@ const TravelGuideCard = () => {
           <h2 className="font-mono">Guide Since 2012</h2>
 
           <a href="https://mukundmadhav.netlify.app/about" target="_blank">
-            <button class="bg-transparent hover:bg-green-900 text-green-900 font-semibold hover:text-white py-2 px-4 border border-green-900 hover:border-transparent rounded mt-8 mb-5">
+            <button className="bg-transparent hover:bg-green-900 text-green-900 font-semibold hover:text-white py-2 px-4 border border-green-900 hover:border-transparent rounded mt-8 mb-5">
               Contact
             </button>
           </a>
