@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ShowCategories from "./ShowCategories";
 import TravelGuideCard from "./TravelGuideCard";
+import { apiRepository } from "./Network/apiRepository";
 
 const Categories = () => {
   const [categoriesData, setCategoriesData] = useState([]);
@@ -11,10 +12,12 @@ const Categories = () => {
   }, []);
 
   const getCategoriesData = async () => {
-    const data = await fetch(url);
-    const json = await data.json();
+    // const data = await fetch(url);
+    // const json = await data.json();
 
-    setCategoriesData(json);
+    const dataForCategories = await apiRepository.getCategories();
+
+    setCategoriesData(dataForCategories);
   };
 
   if (categoriesData.length == 0) {

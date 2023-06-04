@@ -25,7 +25,7 @@ const Activities = () => {
     return null;
   }
 
-  return <div>Activities</div>;
+  return <div>{searchParams.id}</div>;
 };
 
 export default Activities;
