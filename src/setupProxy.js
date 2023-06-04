@@ -4,7 +4,6 @@ module.exports = function (app) {
     "/api",
     createProxyMiddleware({
       target: "https://web-dev.dev.kimo.ai/v1",
-      //   target: 'https://prod.api.jumbotail.com',
       changeOrigin: true,
       pathRewrite: {
         "^/api": "",
