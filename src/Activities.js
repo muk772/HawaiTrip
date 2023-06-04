@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
+import { apiRepository } from "./Network/apiRepository";
 
 const Activities = () => {
   const searchParams = useParams();
@@ -10,16 +11,15 @@ const Activities = () => {
   useEffect(() => {
     getActivitiesData();
   }, []);
-
+  // fetch(
+  //   "https://web-dev.dev.kimo.ai/v1/activities/" + searchParams.id
+  // );
   const getActivitiesData = async () => {
-    const data = await fetch(
-      "https://web-dev.dev.kimo.ai/v1/activities/" + searchParams.id
-    );
+    const data = await apiRepository.getActivities(searchParams.id);
 
-    const json = await data.json();
-    setActivitiesData(json);
-    setShowActivites(json.activities);
-    console.log(json);
+    setActivitiesData(data);
+    setShowActivites(data.activities);
+    console.log(data);
   };
   if (activitiesData?.name == null) {
     return null;

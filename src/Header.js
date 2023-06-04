@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HeaderData = ["Surfing", "Hula", "Volcano"];
+const HeaderData = ["Surfing", "Hula", "Volcanoes"];
 
 const Header = () => {
   return (
