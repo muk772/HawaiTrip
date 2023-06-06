@@ -26,15 +26,14 @@ const Header = () => {
               <h2 className="font-mono font-bold text-2xl">Home</h2>
             </Link>
             {HeaderData.map((curelem) => (
-              <Link
+              <h2
                 onClick={() => {
                   setShowSideBar(false);
                 }}
-                to={"/activities/" + curelem}
                 key={curelem}
               >
                 <h2 className="font-mono font-bold text-2xl mt-5">{curelem}</h2>
-              </Link>
+              </h2>
             ))}
             <button className="bg-green-800 w-32 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-6">
               Book a trip

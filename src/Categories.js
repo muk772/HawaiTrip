@@ -27,7 +27,9 @@ const Categories = () => {
           return <ShowCategories data={curelem} key={curelem.name} />;
         })}
       </div>
+
       <div className="mr-[17%] w-2/4">
+        <h2 className="ml-2 font-bold">Travel Guide</h2>
         <TravelGuideCard />
       </div>
     </div>
