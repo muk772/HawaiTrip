@@ -12,11 +12,7 @@ const Categories = () => {
   }, []);
 
   const getCategoriesData = async () => {
-    // const data = await fetch(url);
-    // const json = await data.json();
-
     const dataForCategories = await apiRepository.getCategories();
-
     setCategoriesData(dataForCategories);
   };
 

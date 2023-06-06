@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HighlightsCards from "./HighlightsCards";
 import { apiRepository } from "./Network/apiRepository";
+import Shimmer from "./Shimmer";
 
 const Highlights = () => {
   const [highlightsData, setHighlightsData] = useState([]);
@@ -17,7 +18,7 @@ const Highlights = () => {
   };
 
   if (!dataReceived) {
-    return null;
+    return <Shimmer/>;
   }
 
   return (

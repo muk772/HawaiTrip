@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const HighlightsCards = ({ data }) => {
+
   return (
     <div className="rounded-lg shadow-2xl w-[100%] m-5 content-center">
       <img alt={data.title} src={data.image} className="rounded-t-lg" />
